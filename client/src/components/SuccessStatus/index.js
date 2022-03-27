@@ -29,6 +29,8 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     flexGrow: 1,
     textAlign: 'left',
+    wordWrap: "break-word",
+    width: '85px'
   },
   iconButton: {
     padding: 10,
