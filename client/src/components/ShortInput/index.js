@@ -5,8 +5,8 @@ import InputBase from '@material-ui/core/InputBase';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowRightRoundedIcon from '@material-ui/icons/Directions';
-import { useDispatch } from "react-redux";
-import {generateCode} from '../../store/shortCodes'
+import { useDispatch } from 'react-redux';
+import { generateCode } from '../../store/shortCodes';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -36,7 +36,7 @@ export default function CustomizedInputBase() {
   const dispatch = useDispatch();
 
   function callApi() {
-    if(url !== ''){
+    if (url !== '') {
       dispatch(generateCode(url));
     }
   }
@@ -47,10 +47,17 @@ export default function CustomizedInputBase() {
         className={classes.input}
         placeholder="Please provide a URL to shorten"
         inputProps={{ 'aria-label': 'url to shorten' }}
-        onChange={(event)=>{setUrl(event.target.value)}}
+        onChange={(event) => {
+          setUrl(event.target.value);
+        }}
       />
       <Divider className={classes.divider} orientation="vertical" />
-      <IconButton color="primary" onClick={callApi} className={classes.iconButton} aria-label="shorten">
+      <IconButton
+        color="primary"
+        onClick={callApi}
+        className={classes.iconButton}
+        aria-label="shorten"
+      >
         <ArrowRightRoundedIcon />
       </IconButton>
     </Paper>

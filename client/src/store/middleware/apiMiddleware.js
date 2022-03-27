@@ -30,7 +30,6 @@ const api =
       if (onSuccess) dispatch({ type: onSuccess, payload: response.data });
     } catch (error) {
       // dispatch error occured action
-      console.dir(error)
       dispatch(actions.generateCallFailed(error.message));
       if (onError) dispatch({ type: onError, payload: error.response.data });
     }
