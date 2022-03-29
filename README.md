@@ -33,3 +33,14 @@ Docker file is created for deploying soluiton as a docker container
 - Frontend is configured to be served by express server
 
 You can find the deployed application using heroku [here](https://young-beyond-93590.herokuapp.com)
+
+### Unit tests for server code
+
+Add unit tests for server side code.
+Please update environment variables for testing database.
+
+```
+TEST_DBHOST=
+TEST_DBUSER=
+TEST_DBPASS=
+```
